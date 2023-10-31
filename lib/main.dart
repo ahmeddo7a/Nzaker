@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:nzaker/core/basics/screens/splash_screen.dart';
-import 'package:nzaker/core/components/resources/color_manager.dart';
+import 'package:nzaker/core/components/resources/theme_manager/light_theme.dart';
 
 import 'core/components/resources/route_manager.dart';
+import 'core/services/service_locator.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  ServiceLocator().init();
   runApp(const MyApp());
 }
 
@@ -26,12 +29,10 @@ class MyApp extends StatelessWidget {
         Locale("ar", ""), // OR Locale('ar', 'AE') OR Other RTL locales
       ],
       locale: const Locale("ar", ""),
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: ColorManager.mainColor),
-        useMaterial3: true,
-      ),
+      theme: lightTheme(),
       onGenerateRoute: RouteGenerator.getRoute,
       home: const SplashScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

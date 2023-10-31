@@ -24,9 +24,13 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final myWidth = MediaQuery.sizeOf(context).width;
     return Scaffold(
       body: Center(
-        child: SvgPicture.asset(ImageAssetsManager.mainLogo,),
+        child: Padding(
+          padding:  EdgeInsets.symmetric(horizontal: myWidth*0.3),
+          child: SvgPicture.asset(ImageAssetsManager.mainLogo,),
+        ),
       ),
     );
   }

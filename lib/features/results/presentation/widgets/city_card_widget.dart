@@ -14,7 +14,7 @@ class CityCardWidget extends StatelessWidget {
 
       },
       child: Card(
-        elevation: 1,
+        elevation: 2,
         child: Padding(
           padding: EdgeInsets.symmetric(
               horizontal: myWidth * 0.05, vertical: myHeight * 0.02),
@@ -23,7 +23,7 @@ class CityCardWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(country.countryName,style: Theme.of(context).textTheme.bodyLarge,),
-              SizedBox(height: myHeight*0.02,),
+              SizedBox(height: myHeight*0.01,),
               Text(country.title,style: Theme.of(context).textTheme.bodyMedium,)
             ],
           ),

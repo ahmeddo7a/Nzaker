@@ -13,11 +13,12 @@ ThemeData lightTheme(){
       systemOverlayStyle: SystemUiOverlayStyle(
           statusBarColor: ColorManager.mainColor,
           statusBarIconBrightness: Brightness.dark),
-      backgroundColor: Colors.white,
+      backgroundColor: ColorManager.mainColor,
       elevation: 0,
       titleTextStyle: TextStyle(
-        color: ColorManager.mainColor,
+        color: ColorManager.white,
         fontSize: 30,
+        fontFamily: FontConstants.mainFontFamily,
         fontWeight: FontWeightManager.bold,
       ),
     ),
@@ -28,7 +29,7 @@ ThemeData lightTheme(){
             fontFamily: FontConstants.mainFontFamily,
             fontWeight: FontWeightManager.semiBold),
         titleLarge: TextStyle(
-            fontSize: 22,
+            fontSize: 24,
             color: ColorManager.mainColor,
             fontFamily: FontConstants.mainFontFamily,
             fontWeight: FontWeightManager.bold),
@@ -41,7 +42,7 @@ ThemeData lightTheme(){
             fontSize: 16,
             color: ColorManager.black,
             fontFamily: FontConstants.mainFontFamily,
-            fontWeight: FontWeightManager.semiBold),
+            fontWeight: FontWeightManager.regular),
         bodySmall: TextStyle(
             fontSize: 14,
             color: ColorManager.grey,
