@@ -1,5 +1,6 @@
-import 'package:nzaker/features/results/data/models/countries_model.dart';
-import 'package:nzaker/features/results/domain/entities/home_entity_response.dart';
+import 'package:nzaker/features/results/data/models/home_models/countries_model.dart';
+
+import '../../../domain/entities/home_entities/home_entity_response.dart';
 
 class HomeModelResponse extends HomeEntityResponse {
   const HomeModelResponse(

@@ -5,11 +5,11 @@ import 'package:nzaker/core/basics/screens/basic_loading_screen.dart';
 import 'package:nzaker/core/components/resources/font_manager.dart';
 import 'package:nzaker/core/components/resources/string_manager.dart';
 import 'package:nzaker/core/components/widgets/app_bar.dart';
-import 'package:nzaker/features/results/domain/entities/home_entity_response.dart';
-import 'package:nzaker/features/results/presentation/logic/home_cubit.dart';
 import 'package:nzaker/features/results/presentation/widgets/city_card_widget.dart';
 
 import '../../../../core/services/service_locator.dart';
+import '../../domain/entities/home_entities/home_entity_response.dart';
+import '../logic/home/home_cubit.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

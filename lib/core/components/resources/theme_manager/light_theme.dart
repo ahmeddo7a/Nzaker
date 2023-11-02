@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../color_manager.dart';
 import '../font_manager.dart';
+import 'input_decoration_theme.dart';
 
 ThemeData lightTheme(){
   return ThemeData(
@@ -22,6 +23,7 @@ ThemeData lightTheme(){
         fontWeight: FontWeightManager.bold,
       ),
     ),
+      inputDecorationTheme: MyLightInputTheme().theme(),
       textTheme: const TextTheme(
         headlineLarge: TextStyle(
             fontSize: 40,

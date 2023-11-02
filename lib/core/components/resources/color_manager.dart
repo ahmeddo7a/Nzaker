@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 
 class ColorManager {
   static const Color mainColor = Color(0xff003F5E);
-  static const Color buttonColor = Color(0xff64c3b6);
-  static const Color borderColor = Color(0xff64c3b6);
+  static const Color buttonColor = Color(0xff003F5E);
+  static const Color borderColor = Color(0xff003F5E);
 
 
 
+  static const Color inputDecorationColor = Color(0xff003F5E);
 
   // Normal Colors
   static const Color orange = Color(0xffED9311);

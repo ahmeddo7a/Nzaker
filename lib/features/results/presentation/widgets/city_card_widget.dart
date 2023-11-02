@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nzaker/features/results/domain/entities/countries_entity.dart';
+import 'package:nzaker/core/basics/screen_arguments_class.dart';
+import 'package:nzaker/core/components/resources/route_manager.dart';
+import 'package:nzaker/features/results/domain/entities/home_entities/countries_entity.dart';
 
 class CityCardWidget extends StatelessWidget {
   final CountriesEntity country;
@@ -11,7 +13,7 @@ class CityCardWidget extends StatelessWidget {
     final myWidth = MediaQuery.sizeOf(context).width;
     return InkWell(
       onTap: (){
-
+        Navigator.pushNamed(context, Routes.countryDetailsRoute,arguments: ScreenArguments<String>(data: country.countryName));
       },
       child: Card(
         elevation: 2,
