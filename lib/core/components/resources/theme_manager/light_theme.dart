@@ -10,7 +10,7 @@ ThemeData lightTheme(){
     visualDensity: VisualDensity.adaptivePlatformDensity,
     scaffoldBackgroundColor: ColorManager.white,
     appBarTheme: const AppBarTheme(
-      foregroundColor: ColorManager.lightBlack,
+      foregroundColor: ColorManager.white,
       systemOverlayStyle: SystemUiOverlayStyle(
           statusBarColor: ColorManager.mainColor,
           statusBarIconBrightness: Brightness.dark),

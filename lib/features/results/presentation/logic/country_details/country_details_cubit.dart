@@ -7,6 +7,8 @@ import 'package:nzaker/core/components/enum.dart';
 import 'package:nzaker/core/components/resources/string_manager.dart';
 import 'package:nzaker/features/results/domain/entities/country_details_entities/country_details_entity.dart';
 
+import '../../../../../core/basics/screen_arguments_class.dart';
+import '../../../../../core/components/resources/route_manager.dart';
 import '../../../domain/use_cases/get_country_details_use_case.dart';
 
 part 'country_details_state.dart';
@@ -31,11 +33,9 @@ class CountryDetailsCubit extends Cubit<CountryDetailsState> {
   }
 
   String seatNumber = '';
-  void searchBySeatNumber({required BuildContext context}) async{
+  void searchBySeatNumber({required BuildContext context, required String city}) async{
     if(validateSeatNumber(seatNumber)){
-
-
+      Navigator.pushNamed(context, Routes.resultScreenRoute,arguments: ScreenArguments<Map<String,dynamic>>(data: {'city':city,'seatNumber':seatNumber}));
     }
-
   }
 }
