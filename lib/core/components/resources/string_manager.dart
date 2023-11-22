@@ -12,6 +12,6 @@ class AppStrings {
 
   static const String pleaseEnterSeatNumber = 'برجاء ادخال رقم الجلوس';
   static const String pleaseEnterValidSeatNumber = 'برجاء ادخال رقم جلوس صحيح';
-
+  static const String clickToGotoWebsite = 'اضغط هنا لمعرفة الترتيب و البحث بالاسم';
 
 }

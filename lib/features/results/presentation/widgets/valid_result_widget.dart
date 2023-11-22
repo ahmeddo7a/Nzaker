@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nzaker/core/components/resources/color_manager.dart';
 import 'package:nzaker/core/components/resources/size_manager.dart';
 import 'package:nzaker/core/components/widgets/app_bar.dart';
+import 'package:nzaker/core/components/widgets/custom_button.dart';
 import 'package:nzaker/features/results/presentation/logic/result/result_cubit.dart';
 import 'package:nzaker/features/results/presentation/widgets/result_widgets/student_data_row_widget.dart';
 
@@ -55,6 +56,7 @@ class ValidResultWidget extends StatelessWidget {
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(SizeManager.smallRadius))
                     ),
+                    color: ColorManager.cardBackgroundColor,
                     child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: myWidth*0.02,vertical: myHeight*0.005),
                       child: ListView.builder(
@@ -76,18 +78,30 @@ class ValidResultWidget extends StatelessWidget {
                   ),
                   child: Padding(
                     padding: EdgeInsets.symmetric(horizontal: myWidth*0.02,vertical: myHeight*0.005),
-                    child: ListView.builder(
+                    child: ListView.separated(
                         physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                         itemBuilder: (context, index) => StudentDataRowWidget(
                             studentDataKey:cubit.subjectDataKeys[index],
                             studentDataValue: cubit.subjectDataValues[index]
                         ),
+                        separatorBuilder: (context, index) => const Divider(),
                         itemCount: cubit.subjectDataValues.length),
                   ),
               ),
-              SizedBox(height: myHeight*0.2,),
-              Text('GO TO SITE')
+              SizedBox(height: myHeight*0.02,),
+              Center(
+                child: SizedBox(
+                  width: myWidth*0.65,
+                  height: myHeight*0.045,
+                  child: CustomButton(
+                      onPressed: (){
+                        cubit.launchMyUrl();
+                      },
+                      widget: const Text(AppStrings.clickToGotoWebsite)
+                  ),
+                ),
+              )
             ],
           ),
         ),

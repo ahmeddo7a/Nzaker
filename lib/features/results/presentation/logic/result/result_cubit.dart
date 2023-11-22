@@ -4,6 +4,7 @@ import 'package:nzaker/core/basics/map_parameters.dart';
 import 'package:nzaker/core/components/components.dart';
 import 'package:nzaker/core/components/enum.dart';
 import 'package:nzaker/features/results/domain/entities/result_entities/natiga_entity.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../domain/use_cases/get_result_use_case.dart';
 
@@ -56,5 +57,11 @@ class ResultCubit extends Cubit<ResultState> {
         emit(ResultFetchNotValid());
       }
     });
+  }
+  Future<void> launchMyUrl() async {
+    final Uri url = Uri.parse('https://natiga.nezakr.net');
+    if (!await launchUrl(url)) {
+      throw Exception('Could not launch $url');
+    }
   }
 }

@@ -10,7 +10,7 @@ import '../../main.dart';
 import '../basics/screen_arguments_class.dart';
 import '../components/resources/route_manager.dart';
 
-
+/*
 NotificationService notificationService = NotificationService();
 
 class NotificationService {
@@ -113,28 +113,12 @@ class NotificationService {
 }
 
 void onDidReceiveBackgroundNotificationResponse(NotificationResponse details) {
-  print("Backgroud notification !!!!");
-  print(details.id);
-  print(details.notificationResponseType);
-  print(details.payload);
-  final message = RemoteMessage.fromMap(jsonDecode(details.payload!));
-  handleMessage(message);
-  //handle your logic here
 }
 
 void onDidReceiveNotificationResponse(NotificationResponse details) {
-  print(details.notificationResponseType);
-  print(details.id);
-  print(details.payload);
-  final message = RemoteMessage.fromMap(jsonDecode(details.payload!));
-   handleMessage(message);
 }
 
-void handleMessage(RemoteMessage? message) async{
-  print('Hello i am handling message !!');
-  print(message);
-if (message == null || message.data['city'] == null) return;
-await navigatorKey.currentState?.pushNamed(Routes.countryDetailsRoute,
-arguments: ScreenArguments(data: message.data['city']));
-}
+ */
+
+
 

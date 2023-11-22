@@ -18,10 +18,10 @@ class StudentDataRowWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Expanded(
-                flex: 2,
+                flex: 3,
                 child: Text('$studentDataKey :',style: Theme.of(context).textTheme.bodyLarge!.copyWith(fontSize: 16),)),
             Expanded(
-                flex: 3,
+                flex: 5,
                 child: Center(child: Text(studentDataValue,style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: ColorManager.black),textAlign: TextAlign.center,)))
           ],
         ),

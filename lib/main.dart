@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:nzaker/core/basics/screens/splash_screen.dart';
 import 'package:nzaker/core/components/resources/theme_manager/light_theme.dart';
+import 'package:nzaker/core/services/notification_services.dart';
 
 import 'core/components/resources/route_manager.dart';
 import 'core/services/firebase_sevice.dart';
@@ -19,7 +20,9 @@ void main() async{
     options: DefaultFirebaseOptions.currentPlatform,
   );
   //await FirebaseApi.initNotification();
-  await notificationService.init();
+  //await notificationService.init();
+
+
   runApp(const MyApp());
 }
 
@@ -30,6 +33,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      key: navigatorKey,
       title: 'Flutter Demo',
       localizationsDelegates: const [
         GlobalCupertinoLocalizations.delegate,
@@ -39,7 +43,6 @@ class MyApp extends StatelessWidget {
       supportedLocales: const [
         Locale("ar", ""), // OR Locale('ar', 'AE') OR Other RTL locales
       ],
-      key: navigatorKey,
       locale: const Locale("ar", ""),
       theme: lightTheme(),
       onGenerateRoute: RouteGenerator.getRoute,

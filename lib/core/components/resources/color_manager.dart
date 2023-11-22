@@ -4,6 +4,8 @@ class ColorManager {
   static const Color mainColor = Color(0xff003F5E);
   static const Color buttonColor = Color(0xff003F5E);
   static const Color borderColor = Color(0xff003F5E);
+  static const Color cardBackgroundColor = Color(0xfff2f2f2);
+  //static const Color cardBackgroundColor = Color(0xffb4a598);
 
 
 
